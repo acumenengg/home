@@ -17,6 +17,9 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [menuOpen]);
 
   const handleNavClick = () => setMenuOpen(false);
@@ -28,7 +31,7 @@ export default function Navbar() {
           <BrandLogo variant="horizontal" className="navbar__logo" />
         </a>
 
-        <nav className={`navbar__nav ${menuOpen ? 'navbar__nav--open' : ''}`} aria-hidden={!menuOpen}>
+        <nav className="navbar__nav navbar__nav--desktop" aria-label="Main navigation">
           <ul className="navbar__links">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -38,9 +41,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a href="#contact" className="btn btn-primary navbar__mobile-cta" onClick={handleNavClick}>
-            Get Quote
-          </a>
         </nav>
 
         <div className="navbar__actions">
@@ -66,6 +66,27 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      <nav
+        className={`navbar__nav navbar__nav--mobile ${menuOpen ? 'navbar__nav--open' : ''}`}
+        aria-label="Mobile navigation"
+        aria-hidden={!menuOpen}
+      >
+        <div className="navbar__mobile-panel">
+          <ul className="navbar__links">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} onClick={handleNavClick} className="navbar__link">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a href="#contact" className="btn btn-primary navbar__mobile-cta" onClick={handleNavClick}>
+            Get Quote
+          </a>
+        </div>
+      </nav>
     </header>
   );
 }
