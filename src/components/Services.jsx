@@ -63,32 +63,70 @@ export default function Services() {
               {category.servicesHeading && (
                 <p className="services__services-heading">{category.servicesHeading}</p>
               )}
+              {category.servicesIntro && (
+                <p className="services__intro">{category.servicesIntro}</p>
+              )}
               <p className="services__hint services__hint--desktop">Hover over each service to learn more</p>
               <p className="services__hint services__hint--mobile">Tap each service to learn more</p>
             </div>
           </div>
 
-          <div className="services__grid stagger-children">
-            {category.services.map((service) => (
-              <div
-                key={service.name}
-                className={`service-item glass-card ${expandedService === service.name ? 'service-item--expanded' : ''}`}
-                onClick={() => toggleService(service.name)}
-                onKeyDown={(e) => e.key === 'Enter' && toggleService(service.name)}
-                role="button"
-                tabIndex={0}
-              >
-                <div className="service-item__front">
-                  <span className="service-item__dot" style={{ background: category.color }} />
-                  <h4>{service.name}</h4>
-                  <span className="service-item__chevron" aria-hidden="true">›</span>
+          {category.serviceGroups ? (
+            <div className="services__groups stagger-children">
+              {category.serviceGroups.map((group) => (
+                <div key={group.heading} className="services__group">
+                  <h4 className="services__group-heading">{group.heading}</h4>
+                  <div className="services__grid">
+                    {group.services.map((service) => (
+                      <div
+                        key={service.name}
+                        className={`service-item glass-card ${expandedService === service.name ? 'service-item--expanded' : ''}`}
+                        onClick={() => toggleService(service.name)}
+                        onKeyDown={(e) => e.key === 'Enter' && toggleService(service.name)}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <div className="service-item__front">
+                          <span className="service-item__dot" style={{ background: category.color }} />
+                          <h4>{service.name}</h4>
+                          <span className="service-item__chevron" aria-hidden="true">›</span>
+                        </div>
+                        <div className="service-item__back">
+                          <p>{service.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="service-item__back">
-                  <p>{service.description}</p>
+              ))}
+            </div>
+          ) : (
+            <div className="services__grid stagger-children">
+              {category.services.map((service) => (
+                <div
+                  key={service.name}
+                  className={`service-item glass-card ${expandedService === service.name ? 'service-item--expanded' : ''}`}
+                  onClick={() => toggleService(service.name)}
+                  onKeyDown={(e) => e.key === 'Enter' && toggleService(service.name)}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <div className="service-item__front">
+                    <span className="service-item__dot" style={{ background: category.color }} />
+                    <h4>{service.name}</h4>
+                    <span className="service-item__chevron" aria-hidden="true">›</span>
+                  </div>
+                  <div className="service-item__back">
+                    <p>{service.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
+
+          {category.closingNote && (
+            <p className="services__closing fade-up">{category.closingNote}</p>
+          )}
         </div>
       </div>
     </section>

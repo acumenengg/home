@@ -18,19 +18,17 @@ export default function About() {
         <div className="about__grid">
           <div className="about__content slide-left">
             <div className="about__block glass-card fade-up">
-              <h3>Our Vision</h3>
+              <h3>Our Mission</h3>
               <p>
-                To be the global leader in structural engineering support services,
-                empowering builders and designers with intelligent, accurate, and
-                innovative solutions that shape the infrastructure of tomorrow.
+                To transform engineering insight into practical, precise, and dependable
+                solutions that create value for every project.
               </p>
             </div>
             <div className="about__block glass-card fade-up">
-              <h3>Our Mission</h3>
+              <h3>Our Vision</h3>
               <p>
-                Deliver world-class engineering documentation through advanced BIM workflows,
-                skilled professionals, and unwavering commitment to quality — helping our
-                clients build safer, smarter, and faster.
+                To be recognized worldwide as a trusted engineering services partner,
+                delivering excellence through insight, precision, and innovation.
               </p>
             </div>
             <div className="about__intro fade-up">
@@ -49,7 +47,7 @@ export default function About() {
         </div>
 
         <div className="about__values">
-          <h3 className="about__values-title fade-up">Our Core Values</h3>
+          <h3 className="about__values-title fade-up">Our Values</h3>
           <div className="about__values-grid stagger-children">
             {values.map((v) => (
               <div key={v.title} className="value-card glass-card">

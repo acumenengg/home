@@ -2,6 +2,73 @@
   background: var(--bg-secondary);
 }
 
+.projects__subsection-title {
+  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+}
+
+.projects__experience {
+  margin-bottom: 3rem;
+}
+
+.projects__table-wrap {
+  overflow-x: auto;
+  padding: 0;
+}
+
+.projects__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.projects__table th,
+.projects__table td {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.projects__table th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  white-space: nowrap;
+}
+
+.projects__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.projects__table tbody tr:hover td {
+  background: color-mix(in srgb, var(--accent) 4%, transparent);
+}
+
+.projects__scope-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  background: var(--accent-glow);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.projects__major {
+  margin-bottom: 1rem;
+}
+
+.projects__scope-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
 .projects__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -97,6 +164,15 @@
   margin-bottom: 1rem;
 }
 
+.project-card__scope .project-card__scope-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
 .project-card__metrics {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,6 +201,53 @@
 }
 
 @media (max-width: 768px) {
+  .projects__table thead {
+    display: none;
+  }
+
+  .projects__table,
+  .projects__table tbody,
+  .projects__table tr,
+  .projects__table td {
+    display: block;
+    width: 100%;
+  }
+
+  .projects__table tr {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .projects__table tr:last-child {
+    border-bottom: none;
+  }
+
+  .projects__table td {
+    padding: 0.35rem 0;
+    border-bottom: none;
+    text-align: right;
+  }
+
+  .projects__table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  .projects__table td:first-child {
+    font-weight: 700;
+    color: var(--accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .projects__table td:first-child::before {
+    content: 'Sr.';
+  }
+
   .projects__grid {
     grid-template-columns: 1fr;
     gap: 1rem;
