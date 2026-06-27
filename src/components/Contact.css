@@ -114,6 +114,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: visible;
 }
 
 .contact__form-embed {
@@ -122,14 +123,15 @@
   overflow: visible;
   border-radius: 8px;
   background: var(--bg-glass);
+  padding-bottom: 0.5rem;
 }
 
 .contact__form-embed iframe {
   display: block;
   width: 100%;
-  height: 826px;
+  min-height: 1050px;
+  height: 1050px;
   border: 0;
-  overflow: hidden;
 }
 
 @media (min-width: 969px) {
@@ -145,13 +147,15 @@
   }
 
   .contact__form-embed iframe {
-    height: 826px;
+    min-height: 1050px;
+    height: 1050px;
   }
 }
 
 @media (max-width: 968px) {
   .contact__form-embed iframe {
-    height: 826px;
+    min-height: 1120px;
+    height: 1120px;
   }
 }
 

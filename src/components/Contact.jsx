@@ -82,11 +82,10 @@ export default function Contact() {
                   title="Acumen Engineering Contact Form"
                   src={contactInfo.formEmbed}
                   width="640"
-                  height="826"
+                  height={contactInfo.formHeight}
                   frameBorder="0"
                   marginHeight="0"
                   marginWidth="0"
-                  scrolling="no"
                   loading="lazy"
                 >
                   Loading…

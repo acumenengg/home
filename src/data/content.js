@@ -260,6 +260,7 @@ export const contactInfo = {
     'https://www.google.com/maps?q=501,+Sai+Park+Phase+5,+near+Man+Pasand+Sweets,+Manjari+Budruk,+Maharashtra+412307&output=embed',
   formEmbed:
     'https://docs.google.com/forms/d/e/1FAIpQLScw9YPx9qpag_fVhL1FKCn8BNTo56ruxqQumgKgLu5IE03b2g/viewform?embedded=true',
+  formHeight: 1050,
 };
 
 export const navLinks = [
