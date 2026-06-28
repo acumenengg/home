@@ -83,6 +83,14 @@
   word-wrap: break-word;
 }
 
+.services__subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.02em;
+}
+
 .services__overview {
   font-size: 0.9rem;
   color: var(--text-secondary);

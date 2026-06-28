@@ -36,28 +36,200 @@ export const values = [
 export const serviceCategories = [
   {
     id: 'steel',
-    title: 'Rebar, Steel and Precast Detailing',
+    title: 'Rebar Detailing Services',
+    subtitle: 'Precision Reinforcement | Optimized Construction',
     icon: '⬡',
     color: '#FF8C00',
     overview:
       'Delivering precision-driven Rebar Detailing solutions for efficient, cost-effective construction. We provide optimized bar bending schedules with accurate sizes, grades, and lengths to reduce wastage, eliminate errors, and accelerate project execution. Our detailing expertise ensures better coordination, smoother site operations, and improved project profitability.',
-    servicesHeading: 'The cost management also covers services such as:',
     services: [
-      { name: 'Rebar Concrete Shop Drawings', description: 'Fabrication-ready shop drawings for concrete reinforcement per project standards.' },
-      { name: 'Bar Bending Schedules', description: 'Accurate BBS with bar marks, shapes, lengths, and quantities for efficient placement.' },
-      { name: 'Concrete Masonry Detailing', description: 'Detailed masonry unit layouts, reinforcement, and connection documentation.' },
-      { name: 'Rebar Placement Drawings', description: 'Clear placement plans showing bar locations, spacing, and installation sequences.' },
-      { name: 'As Built Drawings Services', description: 'Field-verified record drawings reflecting actual constructed conditions.' },
-      { name: 'Retaining Wall Detailing', description: 'Complete rebar and structural detailing for retaining and earth-retention systems.' },
-      { name: 'Rebar Foundation Detailing', description: 'Footing, pile cap, and mat foundation reinforcement detailing and placement drawings.' },
-      { name: 'Reality Capture (Point Cloud)', description: 'Laser scan to as-built documentation for accurate field-to-model coordination.' },
-      { name: 'Rebar Design Services', description: 'Engineering support for rebar layout, sizing, and structural reinforcement design.' },
-      { name: 'Rebar Junction Coordination Drawings', description: 'Detailed junction and intersection drawings for complex rebar tie-in points.' },
-      { name: 'High Quality Detailing Suiting', description: 'Precision detailing aligned with project specifications and fabricator standards.' },
-      { name: 'Rebar Detailing, Drawing, Estimating', description: 'Integrated detailing, drawing production, and quantity estimating services.' },
-      { name: '3D Modeling Of Rebar Using Tekla Structures', description: 'Intelligent 3D rebar models with clash detection and fabrication output.' },
-      { name: 'Quality Take-Offs Including Rebar & Concrete', description: 'Reliable material take-offs for rebar and concrete to support bidding and procurement.' },
-      { name: 'Rebar Lists For Beams, Slabs, Columns Walls, Foundations And Other Structures', description: 'Comprehensive rebar listing and scheduling across all structural elements.' },
+      {
+        name: 'Rebar Shop Drawings',
+        description:
+          'Fabrication- and site-ready reinforcement drawings prepared in accordance with project specifications and international standards.',
+      },
+      {
+        name: 'Bar Bending Schedules (BBS)',
+        description:
+          'Comprehensive bar schedules with accurate shapes, lengths, quantities, weights, and bar marks for efficient fabrication.',
+      },
+      {
+        name: '3D Rebar Modelling (Revit & Tekla Structures)',
+        description:
+          'Intelligent 3D reinforcement models that improve visualization, coordination, and constructability before construction.',
+      },
+      {
+        name: 'Reinforcement Placement Drawings',
+        description:
+          'Clear installation drawings showing the exact placement, spacing, laps, hooks, and anchorage of reinforcement.',
+      },
+      {
+        name: 'Reinforcement Detailing for Foundations',
+        description:
+          'Detailed reinforcement drawings for footings, pile caps, raft foundations, grade beams, and foundation systems.',
+      },
+      {
+        name: 'Reinforcement Detailing for Concrete Structures',
+        description:
+          'Accurate detailing for beams, slabs, columns, walls, stairs, retaining walls, tanks, and other reinforced concrete elements.',
+      },
+      {
+        name: 'Reinforcement Congestion & Clash Resolution',
+        description:
+          'Optimized detailing that identifies and resolves reinforcement conflicts before fabrication and construction.',
+      },
+      {
+        name: 'Rebar Quantity Take-Off & Estimation',
+        description:
+          'Precise reinforcement quantity calculations supporting tendering, procurement, budgeting, and project cost control.',
+      },
+      {
+        name: 'BIM Coordination & Constructability Review',
+        description:
+          'Integrated coordination with structural, architectural, and MEP disciplines to minimize site conflicts and rework.',
+      },
+      {
+        name: 'As-Built Drawings',
+        description:
+          'Updated reinforcement drawings reflecting the completed construction for future reference and facility management.',
+      },
+    ],
+  },
+  {
+    id: 'structural-steel',
+    title: 'Structural Steel Detailing',
+    subtitle: 'Accurate Fabrication | Efficient Erection',
+    icon: '⬢',
+    color: '#94A3B8',
+    overview:
+      'Delivering precision-engineered Structural Steel Detailing solutions that improve fabrication accuracy, streamline erection, and minimize project risks. Our comprehensive shop drawings, connection details, and 3D models ensure seamless coordination between design, fabrication, and construction for efficient project delivery.',
+    services: [
+      {
+        name: 'Structural Steel Shop Drawings',
+        description:
+          'Fabrication-ready drawings containing complete member dimensions, welds, bolts, and assembly information.',
+      },
+      {
+        name: 'General Arrangement (GA) Drawings',
+        description:
+          'Comprehensive layout drawings showing structural framing, member locations, levels, and identification marks.',
+      },
+      {
+        name: 'Fabrication Drawings',
+        description:
+          'Detailed manufacturing drawings that enable precise fabrication while minimizing production errors.',
+      },
+      {
+        name: 'Erection Drawings',
+        description:
+          'Installation drawings providing erection sequences, member positioning, and field connection details.',
+      },
+      {
+        name: 'Steel Connection Detailing',
+        description:
+          'Accurate detailing of bolted and welded connections designed for safe fabrication and efficient site assembly.',
+      },
+      {
+        name: 'Anchor Bolt & Base Plate Detailing',
+        description:
+          'Precise layouts for anchor bolts, base plates, templates, and foundation interfaces.',
+      },
+      {
+        name: 'Miscellaneous Steel Detailing',
+        description:
+          'Detailed drawings for stairs, handrails, ladders, platforms, canopies, and architectural steel components.',
+      },
+      {
+        name: 'Material Take-Off (MTO) & Bill of Materials (BOM)',
+        description:
+          'Accurate material quantities supporting procurement, fabrication planning, and cost estimation.',
+      },
+      {
+        name: 'CNC Data Generation (DSTV/NC Files)',
+        description:
+          'Machine-ready fabrication files enabling automated cutting, drilling, and manufacturing.',
+      },
+      {
+        name: '3D Steel Modeling (Tekla Structures)',
+        description:
+          'Highly detailed BIM models that improve coordination, visualization, and construction efficiency.',
+      },
+      {
+        name: 'BIM Coordination & Clash Detection',
+        description:
+          'Multi-disciplinary coordination that identifies and resolves design conflicts before fabrication.',
+      },
+      {
+        name: 'As-Built Drawings',
+        description:
+          'Final construction drawings documenting completed steel installations for maintenance and future modifications.',
+      },
+    ],
+  },
+  {
+    id: 'precast',
+    title: 'Precast Detailing',
+    subtitle: 'Precision Manufacturing | Seamless Installation',
+    icon: '▦',
+    color: '#C4A882',
+    overview:
+      'Delivering accurate and constructible Precast Concrete Detailing solutions that simplify manufacturing, transportation, and on-site installation. Our detailed shop drawings, reinforcement layouts, and connection details help precast manufacturers and contractors achieve faster production, precise assembly, and superior project quality.',
+    services: [
+      {
+        name: 'Precast Shop Drawings',
+        description:
+          'Production-ready drawings with complete dimensions, reinforcement, lifting, and connection details.',
+      },
+      {
+        name: 'Precast Panel Detailing',
+        description:
+          'Detailed drawings for architectural, structural, insulated, and sandwich wall panels.',
+      },
+      {
+        name: 'Beam, Column & Slab Detailing',
+        description:
+          'Comprehensive detailing for precast beams, columns, hollow-core slabs, and double-tee systems.',
+      },
+      {
+        name: 'Reinforcement Detailing',
+        description:
+          'Accurate reinforcement layouts ensure structural performance and manufacturing efficiency.',
+      },
+      {
+        name: 'Connection & Embedded Item Detailing',
+        description:
+          'Detailed drawings for inserts, embeds, lifting anchors, connection plates, and cast-in components.',
+      },
+      {
+        name: 'Production Drawings & Piece Tickets',
+        description:
+          'Manufacturing documents that streamline production, identification, and quality control.',
+      },
+      {
+        name: 'Erection Drawings',
+        description:
+          'Installation drawings illustrating panel locations, lifting sequences, and assembly procedures.',
+      },
+      {
+        name: 'Material Take-Off & Quantity Estimation',
+        description:
+          'Accurate quantities of concrete, reinforcement, and embedded components for project planning.',
+      },
+      {
+        name: '3D Precast Modelling (Tekla Structures)',
+        description:
+          'Intelligent BIM models that enhance coordination, production accuracy, and installation planning.',
+      },
+      {
+        name: 'BIM Coordination & Clash Detection',
+        description:
+          'Integrated project coordination to eliminate conflicts before manufacturing and site installation.',
+      },
+      {
+        name: 'As-Built Drawings',
+        description:
+          'Final documentation reflecting the completed precast installation for long-term asset management.',
+      },
     ],
   },
   {

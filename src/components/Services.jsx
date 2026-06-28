@@ -59,6 +59,9 @@ export default function Services() {
             </div>
             <div className="services__panel-text">
               <h3>{category.title}</h3>
+              {category.subtitle && (
+                <p className="services__subtitle">{category.subtitle}</p>
+              )}
               {category.overview && (
                 <p className="services__overview">{category.overview}</p>
               )}
